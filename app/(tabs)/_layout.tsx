@@ -39,11 +39,11 @@ export default function TabsLayout() {
         },
         tabBarStyle: {
           backgroundColor: "#0F0D23",
-          borderRadius: 50,
-          marginHorizontal: 20,
-          marginBottom: 36,
           height: 52,
           position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 36, // ✅ keeps SAME vertical position
           overflow: "hidden",
           borderWidth: 1,
           borderColor: "#0F0D23",
