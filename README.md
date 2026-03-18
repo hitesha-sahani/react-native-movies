@@ -10,10 +10,6 @@
 
 5. 🕸️ [Snippets (Code to Copy)](#snippets)
 
-6. 🔗 [Assets](#links)
-
-7. 🚀 [More](#more)
-
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - **[Expo](https://expo.dev/)** is an open-source platform for building universal native apps (Android, iOS, web) using JavaScript/TypeScript and React Native. It features file-based routing via Expo Router, fast refresh, native modules for camera/maps/notifications, over-the-air updates (EAS), and streamlined app deployment.

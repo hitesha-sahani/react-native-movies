@@ -15,7 +15,7 @@ export default function Splash() {
 
   return (
     <View className="flex-1 bg-black justify-center items-center">
-      {/* 🎬 Top bulb lights */}
+      {/* Top bulb lights */}
       <View className="absolute top-16 flex-row">
         {[...Array(12)].map((_, i) => (
           <View
@@ -35,10 +35,10 @@ export default function Splash() {
         ))}
       </View>
 
-      {/* 🎥 Glow behind GIF */}
+      {/* Glow behind GIF */}
       <View className="absolute w-72 h-72 bg-yellow-500 opacity-10 rounded-full" />
 
-      {/* 🎬 Main GIF */}
+      {/* Main GIF */}
       <Image
         source={{
           uri: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm9odWRvM3VjeXB4NHBpOTlrZG45ZGNpcGdtYzg5b3M5ZnRsdTRpZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7rc0qU6m5hneMsuc/giphy.gif",
@@ -47,12 +47,12 @@ export default function Splash() {
         resizeMode="contain"
       />
 
-      {/* 🎬 Title */}
+      {/* Title */}
       <Text className="text-white text-xl font-bold mt-4 tracking-widest">
         CINEMA TIME
       </Text>
 
-      {/* 🍿 Tagline */}
+      {/* Tagline */}
       <Text className="text-yellow-300 mt-3 text-base font-medium italic tracking-wide">
         Get your popcorn 🍿
       </Text>
