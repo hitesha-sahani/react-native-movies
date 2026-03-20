@@ -43,7 +43,7 @@ export default function TabsLayout() {
           position: "absolute",
           left: 0,
           right: 0,
-          bottom: 36, // ✅ keeps SAME vertical position
+          bottom: 36,
           overflow: "hidden",
           borderWidth: 1,
           borderColor: "#0F0D23",
