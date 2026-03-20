@@ -1,219 +1,158 @@
-## 📋 <a name="table">Table of Contents</a>
+# 🎬 React Native Movie App
 
-1. 🤖 [Introduction](#introduction)
+A modern **React Native Movie App** built with Expo, featuring real-time movie data, search, and a persistent watchlist system.
 
-2. ⚙️ [Tech Stack](#tech-stack)
+---
 
-3. 🔋 [Features](#features)
+## 🤖 Introduction
 
-4. 🤸 [Quick Start](#quick-start)
+This project goes beyond a basic tutorial by implementing real-world features like local persistence, clean UI design, and improved user experience.
 
-5. 🕸️ [Snippets (Code to Copy)](#snippets)
+✨ Key highlights:
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+* ⭐ Save & ❌ Unsave movies
+* 💾 Persistent storage using AsyncStorage
+* 👤 Profile tab with user stats
+* 🎬 Cinematic splash screen
 
-- **[Expo](https://expo.dev/)** is an open-source platform for building universal native apps (Android, iOS, web) using JavaScript/TypeScript and React Native. It features file-based routing via Expo Router, fast refresh, native modules for camera/maps/notifications, over-the-air updates (EAS), and streamlined app deployment.
+---
 
-- **[React Native](https://reactnative.dev/)** is a framework for building mobile UIs with React. It enables component‑based, cross-platform development with declarative UI, deep native API support, and is tightly integrated with Expo for navigation and native capabilities.
+## 📋 Table of Contents
 
-- **[Appwrite](https://jsm.dev/rn25-appwrite)** is an open-source backend-as-a-service platform offering secure authentication (email/password, OAuth, SMS, magic links), databases, file storage with compression/encryption, real-time messaging, serverless functions, and static site hosting via Appwrite Sites—all managed through a unified console and microservices architecture.
+1. ⚙️ Tech Stack
+2. 🔋 Features
+3. 🤸 Quick Start
+4. 📁 Project Structure
 
-- **[TypeScript](https://www.typescriptlang.org/)** is a statically-typed superset of JavaScript providing type annotations, interfaces, enums, generics, and enhanced tooling. It improves error detection, code quality, and scalability—ideal for robust, maintainable projects.
+---
 
-- **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework enabling rapid UI design via low-level classes. In React Native/Expo, it’s commonly used with NativeWind to apply Tailwind-style utilities to mobile components.
+## ⚙️ Tech Stack
 
-- **[NativeWind](https://www.nativewind.dev/)** brings Tailwind CSS to React Native and Expo, allowing you to style mobile components using utility-first classes for fast, consistent, and responsive UI design.
+* **Expo** – Universal React Native development platform
+* **React Native** – Cross-platform mobile framework
+* **TypeScript** – Static typing for scalable code
+* **NativeWind (Tailwind CSS)** – Utility-first styling
+* **AsyncStorage** – Local persistent storage
+* **TMDB API** – Movie data source
+* **Appwrite (optional)** – Backend services
 
-## <a name="features">🔋 Features</a>
+---
 
-### Features of the Mobile Movie AppProject
+## 🔋 Features
 
-👉 **Real-time data**: Fetching and displaying real-time movie data
+👉 **Real-time data**
+Fetch and display movies from TMDB API
 
-👉 **Home Page**: Featured and discover movies
+👉 **Home Page**
+Browse trending and latest movies
 
-👉 **Search Page**: Search for your favorite movies
+👉 **Search Page**
+Search movies instantly
 
-👉 **Popularity algorithm**: Track user searches to display the most popular movies
+👉 **Save & Unsave System**
 
-and many more, including code architecture and reusability.
+* Save movies to watchlist
+* Remove movies from saved list
 
-## <a name="quick-start">🤸 Quick Start</a>
+👉 **Persistent Storage**
+Saved movies remain after app reload
 
-Follow these steps to set up the project locally on your machine.
+👉 **Profile Tab**
 
-**Prerequisites**
+* View saved movie count
+* Clear saved movies
 
-Make sure you have the following installed on your machine:
+👉 **Cinematic Splash Screen**
+Custom animated loading experience
 
-- [Git](https://git-scm.com/)
+👉 **Clean UI**
+Responsive grid layout with smooth navigation
 
-- [Node.js](https://nodejs.org/en)
+---
 
-- [npm](https://www.npmjs.com/) (Node Package Manager)
+## 🤸 Quick Start
 
-**Cloning the Repository**
+Follow these steps to run the project locally.
 
-**Installation**
+### Prerequisites
 
-Install the project dependencies using npm:
+Make sure you have:
+
+* Git
+* Node.js
+* npm
+
+---
+
+### Clone the repository
+
+```bash
+git clone https://github.com/hitesha-sahani/react-native-movies.git
+cd react-native-movies
+```
+
+---
+
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
+---
 
-Create a new file named `.env` in the root of your project and add the following content:
+### Set up environment variables
+
+Create a `.env` file:
 
 ```env
-
-EXPO_PUBLIC_MOVIE_API_KEY=
-
-EXPO_PUBLIC_APPWRITE_PROJECT_ID=
-
-EXPO_PUBLIC_APPWRITE_DATABASE_ID=
-
-EXPO_PUBLIC_APPWRITE_COLLECTION_ID=
+EXPO_PUBLIC_MOVIE_API_KEY=your_tmdb_api_key
+EXPO_PUBLIC_APPWRITE_PROJECT_ID=your_project_id
+EXPO_PUBLIC_APPWRITE_DATABASE_ID=your_database_id
+EXPO_PUBLIC_APPWRITE_COLLECTION_ID=your_collection_id
 ```
 
-Replace the placeholder values with your actual TMDB API key, Appwrite project ID, Database ID, and Collection ID. You can obtain these credentials by signing up on the [Appwrite](https://jsm.dev/rn25-appwrite), [TMDB](https://www.themoviedb.org/login).
+---
 
-**Running the Project**
+### Run the app
 
 ```bash
-
 npx expo start
-
 ```
 
-Open your ExpoGO app on your phone and scan the QR code to view the project.
+Then scan the QR code using Expo Go.
 
-## <a name="snippets">🕸️ Snippets</a>
+---
 
-<details>
+## 📁 Project Structure
 
-<summary><code>tailwind.config.js</code></summary>
-
-```typescript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
-  presets: [require("nativewind/preset")],
-  theme: {
-    extend: {
-      colors: {
-        primary: "#030014",
-        secondary: "#151312",
-        ratingBox: "#221F3D",
-        searchBar: "#0F0D23",
-        text: "#9CA4AB",
-        darkAccent: "#AB8BFF",
-        accentText: "#A8B5DB",
-        secondaryText: "#D6C7FF",
-      },
-    },
-  },
-  plugins: [],
-};
+```
+app/
+  (tabs)/
+    index.tsx
+    search.tsx
+    save.tsx
+    profile.tsx
+  movie/
+components/
+services/
+constants/
 ```
 
-</details>
+---
 
-<details>
+## 🚀 Future Improvements
 
-<summary><code>app/globals.css</code></summary>
+* 🎬 Movie trailer support
+* ❤️ Favorites system
+* 🔐 Authentication
+* 🎨 UI animations & polish
+* ☁️ Cloud sync
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
+---
 
-</details>
+## 🙌 Author
 
-<details>
+Built with ❤️ by **Hitesha Sahani**
 
-<summary><code>interfaces/interfaces.d.ts</code></summary>
-
-```typescript
-interface Movie {
-  id: number;
-  title: string;
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  original_language: string;
-  original_title: string;
-  overview: string;
-  popularity: number;
-  poster_path: string;
-  release_date: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
-
-interface TrendingMovie {
-  searchTerm: string;
-  movie_id: number;
-  title: string;
-  count: number;
-  poster_url: string;
-}
-
-interface MovieDetails {
-  adult: boolean;
-  backdrop_path: string | null;
-  belongs_to_collection: {
-    id: number;
-    name: string;
-    poster_path: string;
-    backdrop_path: string;
-  } | null;
-  budget: number;
-  genres: {
-    id: number;
-    name: string;
-  }[];
-  homepage: string | null;
-  id: number;
-  imdb_id: string | null;
-  original_language: string;
-  original_title: string;
-  overview: string | null;
-  popularity: number;
-  poster_path: string | null;
-  production_companies: {
-    id: number;
-    logo_path: string | null;
-    name: string;
-    origin_country: string;
-  }[];
-  production_countries: {
-    iso_3166_1: string;
-    name: string;
-  }[];
-  release_date: string;
-  revenue: number;
-  runtime: number | null;
-  spoken_languages: {
-    english_name: string;
-    iso_639_1: string;
-    name: string;
-  }[];
-  status: string;
-  tagline: string | null;
-  title: string;
-  video: boolean;
-  vote_average: number;
-  vote_count: number;
-}
-
-interface TrendingCardProps {
-  movie: TrendingMovie;
-  index: number;
-}
-```
-
-</details>
+GitHub: https://github.com/hitesha-sahani
