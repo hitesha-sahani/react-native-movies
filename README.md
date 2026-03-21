@@ -10,10 +10,10 @@ This project goes beyond a basic tutorial by implementing real-world features li
 
 ✨ Key highlights:
 
-* ⭐ Save & ❌ Unsave movies
-* 💾 Persistent storage using AsyncStorage
-* 👤 Profile tab with user stats
-* 🎬 Cinematic splash screen
+- ⭐ Save & ❌ Unsave movies
+- 💾 Persistent storage using AsyncStorage
+- 👤 Profile tab with user stats
+- 🎬 Cinematic splash screen
 
 ---
 
@@ -28,13 +28,13 @@ This project goes beyond a basic tutorial by implementing real-world features li
 
 ## ⚙️ Tech Stack
 
-* **Expo** – Universal React Native development platform
-* **React Native** – Cross-platform mobile framework
-* **TypeScript** – Static typing for scalable code
-* **NativeWind (Tailwind CSS)** – Utility-first styling
-* **AsyncStorage** – Local persistent storage
-* **TMDB API** – Movie data source
-* **Appwrite (optional)** – Backend services
+- **Expo** – Universal React Native development platform
+- **React Native** – Cross-platform mobile framework
+- **TypeScript** – Static typing for scalable code
+- **NativeWind (Tailwind CSS)** – Utility-first styling
+- **AsyncStorage** – Local persistent storage
+- **TMDB API** – Movie data source
+- **Appwrite (optional)** – Backend services
 
 ---
 
@@ -51,16 +51,16 @@ Search movies instantly
 
 👉 **Save & Unsave System**
 
-* Save movies to watchlist
-* Remove movies from saved list
+- Save movies to watchlist
+- Remove movies from saved list
 
 👉 **Persistent Storage**
 Saved movies remain after app reload
 
 👉 **Profile Tab**
 
-* View saved movie count
-* Clear saved movies
+- View saved movie count
+- Clear saved movies
 
 👉 **Cinematic Splash Screen**
 Custom animated loading experience
@@ -78,9 +78,9 @@ Follow these steps to run the project locally.
 
 Make sure you have:
 
-* Git
-* Node.js
-* npm
+- Git
+- Node.js
+- npm
 
 ---
 
@@ -143,13 +143,25 @@ constants/
 
 ## 🚀 Future Improvements
 
-* 🎬 Movie trailer support
-* ❤️ Favorites system
-* 🔐 Authentication
-* 🎨 UI animations & polish
-* ☁️ Cloud sync
+- 🎬 Movie trailer support
+- ❤️ Favorites system
+- 🔐 Authentication
+- 🎨 UI animations & polish
+- ☁️ Cloud sync
 
 ---
+
+## 💡 Problem Solved
+
+Many users browse movies but forget what they wanted to watch.
+
+This app provides a simple way to:
+
+- discover movies
+- save them instantly
+- access them later without login
+
+It focuses on speed, simplicity, and offline usability.
 
 ## 🙌 Author
 
